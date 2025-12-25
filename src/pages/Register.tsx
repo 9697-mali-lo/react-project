@@ -2,8 +2,6 @@
 import useRegister from '../hooks/useRegister';
 import UserForm from '../hooks/UserForm';
 
-
-// //   // const [formData, setFormData] = useState({
 // //   //   name: '',
 // //   //   email: '',
 // //   //   password: ''

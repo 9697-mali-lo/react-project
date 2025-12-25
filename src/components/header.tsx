@@ -1,9 +1,10 @@
 import { AppBar, Toolbar, Typography, Box, Chip, Container, Divider } from '@mui/material';
-import { useContext } from 'react';
-import { AuthContext } from '../context/authContext';
-// import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../hooks/useAuth';
+import { Button } from '@mui/material';
+
 import LogoutIcon from '@mui/icons-material/Logout';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
+import { useNavigate } from 'react-router-dom';
 
 export default function Header() {
   const navigate = useNavigate();
@@ -93,52 +94,4 @@ export default function Header() {
     </AppBar>
   );
 }
-// import React from 'react';
-import { Link, useNavigate } from 'react-router-dom'; 
-import { useAuth } from '../hooks/useAuth';
-import { Button } from '@mui/material';
 
-// const Navbar = () => {
-//   const { user, logout } = useAuth();
-//   const navigate = useNavigate();
-
-//   return (
-//     <nav style={styles.navbar}>
-//       <div className="logo">
-//         <Link to="/">MySystem</Link>
-//       </div>
-
-//       <div className="nav-actions">
-//       {user ? (
-//           // תצוגה למשתמש מחובר
-//           <>
-//             <span>שלום, {user.name}</span>
-//             <Button onClick={logout}>התנתקות</Button>
-//           </>
-//         ) : (
-//           // תצוגה למשתמש שאינו מחובר
-//           <>
-//             <Button onClick={() => navigate('/login')} >
-//               התחברות
-//             </Button>
-//             <Button onClick={() => navigate('/register')}>
-//               הרשמה
-//             </Button>
-//           </>
-//         )}
-//       </div>
-//     </nav>
-//   );
-// };
-
-// const styles = {
-//   navbar: {
-//     display: 'flex',
-//     justifyContent: 'space-between',
-//     padding: '1rem 2rem',
-//     background: '#f4f4f4',
-//     borderBottom: '1px solid #ddd'
-//   }
-// };
-
-// export default Navbar;

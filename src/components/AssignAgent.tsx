@@ -39,24 +39,7 @@ export default function AssignAgent({ ticketId, onUpdateSuccess }: AssignAgentPr
     if (auth?.token) fetchAgents();
   }, [auth?.token]);
 
-  // 2. עדכון הטיקט - הנתיב המתוקן לפי ה-README
-//   const handleSave = async () => {
-//     if (!selectedAgentId) return;
-//     try {
-//       setIsUpdating(true);
-//       // שים לב: הורדתי את ה-/assign מהסוף כי השרת לא מכיר אותו
-//       await axios.patch(`http://localhost:4000/tickets/${ticketId}`, 
-//         { assigned_to: selectedAgentId }, // השרת מצפה לשדה שנקרא assigned_to
-//         { headers: { Authorization: `Bearer ${auth?.token}` } }
-//       );
-//       onUpdateSuccess();
-//     } catch (err) {
-//       console.error("שגיאה בעדכון", err);
-//       alert("העדכון נכשל. בדוק ב-Swagger את שם השדה המדויק.");
-//     } finally {
-//       setIsUpdating(false);
-//     }
-//   };
+
 const handleSave = async () => {
     if (!selectedAgentId) return;
     
